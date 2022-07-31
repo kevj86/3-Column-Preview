@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --clr-orange: hsl(31, 77%, 52%);
+    --clr-cyan: hsl(184, 100%, 22%);
+    --clr-darkcyan: hsl(179, 100%, 13%);
+    --clr-transparent: hsla(0, 0%, 100%, 0.75); /* Paragraphs */
+    --clr-lightgrey: hsl(0, 0%, 95%); /* Backgrounds Headings Buttons */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.orange { background: var(--clr-orange); }
+.cyan { background: var(--clr-cyan); }
+.darkcyan { background: var(--clr-darkcyan); }
+
+.font-orange { color: var(--clr-orange);}
+.font-cyan { color: var(--clr-cyan);}
+.font-darkcyan { color: var(--clr-darkcyan);}
+
+body {
+    color: var(--clr-lightgrey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: calc(100vh - 1px);
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+    width: 850px;
+}
+
+.cornersTR {
+    border-radius: 0 10px 10px 0;
+}
+
+.cornersBL {
+    border-radius: 10px 0 0 10px;
+}
+
+.slide {
+    padding: 2.25rem;
+}
+
+.para {
+    color: var(--clr-transparent);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    letter-spacing: normal;
+
+    line-height: 1.75rem;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.25rem;
+    color: var(--clr-lightgrey);
+
+    padding: 1.5rem 0;
+}
+
+button {
+    cursor: pointer;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 12px;
+    padding: 0.75rem;
+    padding-inline: 2rem;
+    border-radius: 20px;
+    border: var(--clr-transparent) 2px solid;
+
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+button:hover {
+    content:'';
+    transition: 1s;
+    background-color: var(--clr-orange);
+    color: var(--clr-transparent);
+    border: var(--clr-transparent) 2px solid;
+}
+
+.font-cyan:hover { background-color: var(--clr-cyan); }
+.font-darkcyan:hover { background-color: var(--clr-darkcyan); }
+
+img { 
+    padding-top:1.25rem;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        margin-top: 300px;
+    }
+    .card {
+        flex-direction: column;
+        padding: 2rem;
+        width: 375px;
+    }
+
+    .cornersTR {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .cornersBL {
+        border-radius: 10px 10px 0 0;
+    }
+}
+
+
+.attribution { 
+    font-size: 12px;
+    font-weight: bold; 
+    text-align: center; 
+    color: hsl(228, 45%, 44%); 
+    font-family: 'Lexend Deca', sans-serif; 
+}
+
+.attribution a { 
+    text-decoration: none; 
+    color: hsl(228, 45%, 44%);;
+}
